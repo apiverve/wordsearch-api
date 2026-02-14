@@ -14,30 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/wordsearch'
 
 def call_wordsearch_api():
     """
-    Make a POST request to the Word Search Generator API
+    Make a GET request to the Word Search Generator API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;words&#x27;: [
-        &#x27;PUZZLE&#x27;,
-        &#x27;SEARCH&#x27;,
-        &#x27;WORD&#x27;,
-        &#x27;GAME&#x27;,
-        &#x27;FIND&#x27;,
-        &#x27;HIDDEN&#x27;,
-        &#x27;LETTERS&#x27;
-    ],
-    &#x27;size&#x27;: 15,
-    &#x27;difficulty&#x27;: &#x27;medium&#x27;
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
