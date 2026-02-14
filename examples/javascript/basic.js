@@ -9,32 +9,15 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/wordsearch';
 
 /**
- * Make a POST request to the Word Search Generator API
+ * Make a GET request to the Word Search Generator API
  */
 async function callWordSearchGeneratorAPI() {
   try {
-    // Request body
-    const requestBody &#x3D; {
-    &quot;words&quot;: [
-        &quot;PUZZLE&quot;,
-        &quot;SEARCH&quot;,
-        &quot;WORD&quot;,
-        &quot;GAME&quot;,
-        &quot;FIND&quot;,
-        &quot;HIDDEN&quot;,
-        &quot;LETTERS&quot;
-    ],
-    &quot;size&quot;: 15,
-    &quot;difficulty&quot;: &quot;medium&quot;
-};
-
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'x-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
+        'x-api-key': API_KEY
+      }
     });
 
     // Check if response is successful
