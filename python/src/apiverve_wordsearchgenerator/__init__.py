@@ -1,1 +1,3 @@
-from .apiClient import WordsearchAPIClient
+from .apiClient import WordsearchAPIClient, WordsearchAPIClientError
+
+__all__ = ['WordsearchAPIClient', 'WordsearchAPIClientError']
