@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/wordsearch",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Word Search Generator creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.",
   "main": "index.js",
   "types": "index.d.ts",
