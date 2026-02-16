@@ -44,7 +44,11 @@ from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient
 # Initialize the client with your APIVerve API key
 api = WordsearchAPIClient("[YOUR_API_KEY]")
 
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 ```
 
 ###### Simple Request
@@ -450,7 +458,11 @@ from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient, Wordsear
 
 api = WordsearchAPIClient("[YOUR_API_KEY]")
 
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 
 try:
     result = api.execute(query)
@@ -471,7 +483,11 @@ from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient, Wordsear
 
 api = WordsearchAPIClient("[YOUR_API_KEY]")
 
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 
 try:
     result = api.execute(query)
@@ -505,7 +521,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient, WordsearchAPIClientError
 
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 
 # Using context manager ensures proper cleanup
 with WordsearchAPIClient("[YOUR_API_KEY]") as api:
@@ -531,7 +551,11 @@ from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient
 # Enable debug mode
 api = WordsearchAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -546,8 +570,13 @@ from apiverve_wordsearchgenerator.apiClient import WordsearchAPIClient
 
 api = WordsearchAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "words": ["PUZZLE","SEARCH","WORD","GAME","FIND","HIDDEN","LETTERS"],
+    "size": 15,
+    "difficulty": "medium"
+}
+
 try:
-    query = { "words": [ "PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS" ], "size": 15, "difficulty": "medium" }
     result = api.execute(query)
     print(result)
 finally:
