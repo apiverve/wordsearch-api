@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:wordsearch-api:1.1.13'
+    implementation 'com.github.apiverve:wordsearch-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ WordSearchGeneratorAPIClient client = new WordSearchGeneratorAPIClient("YOUR_API
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("words", new ArrayList<>());
+    parameters.put("words", Arrays.asList("PUZZLE", "SEARCH", "WORD", "GAME", "FIND", "HIDDEN", "LETTERS"));
     parameters.put("size", 15);
     parameters.put("difficulty", "medium");
 
