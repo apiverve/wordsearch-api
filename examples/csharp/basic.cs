@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/wordsearch";
 
         /// <summary>
-        /// Make a GET request to the Word Search Generator API
+        /// Make a POST request to the Word Search Generator API
         /// </summary>
         static async Task<JsonDocument> CallWordSearchGeneratorAPI()
         {
@@ -29,7 +29,13 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                var response = await client.GetAsync(API_URL);
+                // Request body
+                var requestBody &#x3D; new { words &#x3D; PUZZLE,SEARCH,WORD,GAME,FIND,HIDDEN,LETTERS, size &#x3D; 15, difficulty &#x3D; &quot;medium&quot; };
+
+                var jsonContent = JsonSerializer.Serialize(requestBody);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(API_URL, content);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
