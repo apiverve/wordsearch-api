@@ -30,7 +30,7 @@ class wordsearchWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/wordsearch';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"words":{"type":"array","required":true},"size":{"type":"integer","required":false,"min":10,"max":30,"default":15},"difficulty":{"type":"string","required":false,"default":"medium"}};
+        this.validationRules = {"words":{"type":"array","required":true},"size":{"type":"integer","required":false,"min":10,"max":30,"default":15},"difficulty":{"type":"string","required":false,"default":"medium"},"image":{"type":"boolean","required":false,"default":false},"solutionImage":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
