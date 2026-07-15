@@ -355,6 +355,12 @@ paths:
                 difficulty:
                   type: string
                   description: Difficulty level (affects word directions)
+                image:
+                  type: boolean
+                  description: Set to true to generate a downloadable puzzle image
+                solutionImage:
+                  type: boolean
+                  description: Set to true to generate a downloadable solution image
               required:
                 - words
 components:
