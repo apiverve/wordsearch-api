@@ -4,41 +4,53 @@ declare module '@apiverve/wordsearch' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface wordsearchResponse {
     status: string;
     error: string | null;
     data: WordSearchGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface WordSearchGeneratorData {
-      grid:          Array<string[]>;
+      grid:          Array<(null | string)[]>;
       words:         Word[];
-      wordCount:     number;
-      size:          number;
-      difficulty:    string;
-      html:          string;
+      wordCount:     number | null;
+      size:          number | null;
+      difficulty:    null | string;
+      html:          null | string;
       image:         Image;
       solutionImage: Image;
   }
   
   interface Image {
-      imageName:   string;
-      format:      string;
-      downloadURL: string;
-      expires:     number;
+      imageName:   null | string;
+      format:      null | string;
+      downloadURL: null | string;
+      expires:     number | null;
   }
   
   interface Word {
-      word:      string;
+      word:      null | string;
       start:     Start;
-      direction: string;
+      direction: null | string;
   }
   
   interface Start {
-      row: number;
-      col: number;
+      row: number | null;
+      col: number | null;
   }
 
   export default class wordsearchWrapper {
