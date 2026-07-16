@@ -25,6 +25,9 @@ namespace APIVerve.API.WordSearchGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,10 +39,10 @@ namespace APIVerve.API.WordSearchGenerator
         public Word[] Words { get; set; }
 
         [JsonProperty("wordCount")]
-        public long WordCount { get; set; }
+        public long? WordCount { get; set; }
 
         [JsonProperty("size")]
-        public long Size { get; set; }
+        public long? Size { get; set; }
 
         [JsonProperty("difficulty")]
         public string Difficulty { get; set; }
@@ -66,7 +69,7 @@ namespace APIVerve.API.WordSearchGenerator
         public Uri DownloadUrl { get; set; }
 
         [JsonProperty("expires")]
-        public long Expires { get; set; }
+        public long? Expires { get; set; }
     }
 
     public partial class Word
@@ -84,9 +87,21 @@ namespace APIVerve.API.WordSearchGenerator
     public partial class Start
     {
         [JsonProperty("row")]
-        public long Row { get; set; }
+        public long? Row { get; set; }
 
         [JsonProperty("col")]
-        public long Col { get; set; }
+        public long? Col { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
