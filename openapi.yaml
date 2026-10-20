@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Word Search Generator
   description: >-
-    Word Search Generator creates customizable word search puzzles with
-    configurable grid size, word placement, and difficulty levels.
+    Word Search Generator is a word search API that creates customizable word
+    search puzzles with configurable grid size, word placement, and difficulty
+    levels.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/wordsearch:
     post:
-      summary: Generate Word Search
+      summary: Word Search Generator
       description: Create a word search puzzle with custom words
       operationId: wordsearch
       parameters: []
@@ -324,14 +325,12 @@ paths:
                   image:
                     imageName: 0ce84c70-c791-40f9-adfa-2ad3823667f7_puzzle.png
                     format: .png
-                    downloadURL: >-
-                      https://storage.googleapis.com/apiverve/APIData/wordsearch/0ce84c70-c791-40f9-adfa-2ad3823667f7_puzzle.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010772&Signature=QOHSnr40T1DxKtie7xCSTwnqNwfgaur%2BUZDwPf8xhgiaynJPDQjvrVJwZBlkuSFXQFyd212HYyui%2BMUjHIVhMvL8TaGUucqOvXhsaXXl9p5vzQhGsGP2crtP8U94NpXonrL0GjnmFmFFaQOJELbcCqMLfTl5XjArtNsMTp0%2Bj3b8DeL6ljMZe09sRgL5i7cslA%2BLljRRX20Dbd2%2BuqR1r2aGY6pMZEqr7djDDF3uLNnyPq8M2wKPX243FASrcl3URyXZMkVduPYvkwIxvGkcOoeE7GrZo%2FnpOElZgbwevDCklXJ3fS6Ij2ffkLlYSrDNM11VSYUrU1fzgfHX2w%2F5ew%3D%3D
+                    downloadURL: https://storage.googleapis.com/apiverve/APIData/wordsearch/0ce84c70-c791-40f9-adfa-2ad3823667f7_puzzle.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010772&Signature=QOHSnr40T1DxKtie7xCSTwnqNwfgaur%2BUZDwPf8xhgiaynJPDQjvrVJwZBlkuSFXQFyd212HYyui%2BMUjHIVhMvL8TaGUucqOvXhsaXXl9p5vzQhGsGP2crtP8U94NpXonrL0GjnmFmFFaQOJELbcCqMLfTl5XjArtNsMTp0%2Bj3b8DeL6ljMZe09sRgL5i7cslA%2BLljRRX20Dbd2%2BuqR1r2aGY6pMZEqr7djDDF3uLNnyPq8M2wKPX243FASrcl3URyXZMkVduPYvkwIxvGkcOoeE7GrZo%2FnpOElZgbwevDCklXJ3fS6Ij2ffkLlYSrDNM11VSYUrU1fzgfHX2w%2F5ew%3D%3D
                     expires: 1766010772936
                   solutionImage:
                     imageName: b4dc1d71-86e4-4331-af3b-01295373b772_solution.png
                     format: .png
-                    downloadURL: >-
-                      https://storage.googleapis.com/apiverve/APIData/wordsearch/b4dc1d71-86e4-4331-af3b-01295373b772_solution.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010773&Signature=j8897QcmWY1g4fKyE4JUEL4RZ6OCXJCCRmB04DFCpjFOW4vUDfgc62cwJDIBZsCcnbFzTfShMekQJFvrie8MHR59VtbYD58XXI7RPRbxjjEdfZ6exdiRgN%2BXZ%2B%2Ff5L7DksaYC%2Bf6FL80REs4Vb7C%2B0PBlRa%2FBpqo%2FcHXL4An5dIsUKyzXLNrDE6AvYXIyiKNYRcsfTN8g7ekXxqM4uI5XYYF3Kl4KlORrVs395S421Bk1j9Qpet04lI7vTe7dwQIDimuOshA56LfhjN5OK%2FGCxyC0IAJ4cTZcN52ggkeEQSX%2BOgX8Sy%2B6%2BsM7YmkBOVeB%2FKlO7CIX1rKcO5oFOzN8Q%3D%3D
+                    downloadURL: https://storage.googleapis.com/apiverve/APIData/wordsearch/b4dc1d71-86e4-4331-af3b-01295373b772_solution.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010773&Signature=j8897QcmWY1g4fKyE4JUEL4RZ6OCXJCCRmB04DFCpjFOW4vUDfgc62cwJDIBZsCcnbFzTfShMekQJFvrie8MHR59VtbYD58XXI7RPRbxjjEdfZ6exdiRgN%2BXZ%2B%2Ff5L7DksaYC%2Bf6FL80REs4Vb7C%2B0PBlRa%2FBpqo%2FcHXL4An5dIsUKyzXLNrDE6AvYXIyiKNYRcsfTN8g7ekXxqM4uI5XYYF3Kl4KlORrVs395S421Bk1j9Qpet04lI7vTe7dwQIDimuOshA56LfhjN5OK%2FGCxyC0IAJ4cTZcN52ggkeEQSX%2BOgX8Sy%2B6%2BsM7YmkBOVeB%2FKlO7CIX1rKcO5oFOzN8Q%3D%3D
                     expires: 1766010773937
         '401':
           description: Your request was not authorized, or your API Key was invalid
