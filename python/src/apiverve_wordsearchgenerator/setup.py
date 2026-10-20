@@ -10,14 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_wordsearchgenerator',
-    version='1.1.14',
+    version='1.2.2',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Word Search Generator creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.',
+    description='Word Search Generator is a word search API that creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com/marketplace/wordsearch?utm_source=pypi&utm_medium=homepage',
+    url='https://apiverve.com/marketplace/wordsearch?utm_source=pypi&utm_medium=referral&utm_content=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
