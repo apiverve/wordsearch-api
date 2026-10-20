@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/wordsearch",
-  "version": "1.2.0",
-  "description": "Word Search Generator creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.",
+  "version": "1.2.2",
+  "description": "Word Search Generator is a word search API that creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "word search", "word find", "puzzle generator", "printable puzzles", "word games"
+    "word search api", "wordsearch api", "word search generator api", "word search", "word search maker"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/wordsearch-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/wordsearch?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/wordsearch?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
