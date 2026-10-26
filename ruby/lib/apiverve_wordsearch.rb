@@ -4,6 +4,6 @@ require_relative "apiverve_wordsearch/client"
 
 module APIVerve
   module Wordsearch
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
