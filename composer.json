@@ -1,7 +1,7 @@
 {
     "name": "apiverve/wordsearch",
     "description": "Word Search Generator is a word search API that creates customizable word search puzzles with configurable grid size, word placement, and difficulty levels.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
